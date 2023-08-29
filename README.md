@@ -26,7 +26,9 @@ SIMULADO - Domain Driven Design aplicada em 24/08/2023.
 
 Estamos expandindo o negócio e a meta para este semestre é desenvolver um aplicativo de músicas online.
 
-Nossa equipe de analistas desenvolveu o Diagrama de Classes abaixo, e a sua missão é implementar código capaz de separar as responsabilidades das classes entre as camadas objetivando melhor legibilidade e manutenibilidade do código do programa.
+Nossa equipe de analistas desenvolveu o Diagrama de Classes abaixo, e a sua missão é implementar código capaz de separar
+as responsabilidades das classes entre as camadas objetivando melhor legibilidade e manutenibilidade do código do
+programa.
 
 Na sprint atual, você foi incumbido de fazer:
 
@@ -100,7 +102,7 @@ atividade.
 
 7. **(2,5 Pontos)** implementar corretamente a classe **Main**.
 
-   É necessário que a classe **Main** tenha acesso apenas as classes de serviço, 
+   É necessário que a classe **Main** tenha acesso apenas as classes de serviço,
    Somente as classes de serviço devem chamar os métodos das classes de Repository.
 
    Respeitando as regras acima, implemente:
@@ -136,6 +138,10 @@ Para acessar digite no prompt:
 ```shell
 git clone https://github.com/Benefrancis/benezinho-music && cd benezinho-music && git checkout correcao
 ```
+
+<a href="https://www.youtube.com/playlist?list=PLfKB31vKFiiCVxgVMPAUYhunAcrY8r96j" target="_blank">
+<img src="documentacao/capa.png" width="100%">
+</a>
 
 A avaliação é em dupla.
 

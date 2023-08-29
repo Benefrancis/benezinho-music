@@ -1,7 +1,5 @@
 package br.com.fiap.domain.entity;
 
-import java.util.Set;
-
 public class Artista {
 
     private Long id;
