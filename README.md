@@ -30,6 +30,12 @@ Nossa equipe de analistas desenvolveu o Diagrama de Classes abaixo, e a sua miss
 as responsabilidades das classes entre as camadas objetivando melhor legibilidade e manutenibilidade do código do
 programa.
 
+
+<a href="https://www.youtube.com/playlist?list=PLfKB31vKFiiCVxgVMPAUYhunAcrY8r96j" target="_blank">
+<img src="documentacao/capa.png" width="100%">
+</a>
+
+
 Na sprint atual, você foi incumbido de fazer:
 
 1. As classes responsáveis pelas regras de negócio da aplicação no pacote service.
@@ -139,9 +145,6 @@ Para acessar digite no prompt:
 git clone https://github.com/Benefrancis/benezinho-music && cd benezinho-music && git checkout correcao
 ```
 
-<a href="https://www.youtube.com/playlist?list=PLfKB31vKFiiCVxgVMPAUYhunAcrY8r96j" target="_blank">
-<img src="documentacao/capa.png" width="100%">
-</a>
 
 A avaliação é em dupla.
 
