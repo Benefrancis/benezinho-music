@@ -10,7 +10,7 @@ public class EstiloService implements Service<Estilo, Long> {
     private EstiloRepository repository;
 
     public EstiloService() {
-        repository = new EstiloRepository();
+        repository =  EstiloRepository.of();
     }
 
     @Override

@@ -11,8 +11,28 @@ public class ArtistaRepository implements Repository<Artista, Long> {
 
     private Set<Artista> artistas;
 
-    public ArtistaRepository() {
+    private static volatile ArtistaRepository instance;
+
+    private ArtistaRepository() {
         artistas = new LinkedHashSet<>();
+    }
+
+    /**
+     * Padrão Singleton
+     * @return
+     */
+    public static ArtistaRepository of(){
+        ArtistaRepository result = instance;
+        if(Objects.nonNull( result) ){
+            return result;
+        }
+
+        synchronized (ArtistaRepository.class){
+            if(Objects.isNull( null )){
+                instance = new ArtistaRepository();
+            }
+            return instance;
+        }
     }
 
     @Override

@@ -11,9 +11,30 @@ public class MusicaRepository implements Repository<Musica, Long> {
 
     private Set<Musica> musicas;
 
-    public MusicaRepository() {
+    private static volatile MusicaRepository instance;
+
+    private MusicaRepository() {
         musicas = new LinkedHashSet<>();
     }
+
+    /**
+     * PAdrão Singleton
+     * @return
+     */
+    public static MusicaRepository of(){
+        MusicaRepository result = instance;
+        if(Objects.nonNull( result) ){
+            return result;
+        }
+
+        synchronized (MusicaRepository.class){
+            if(Objects.isNull( null )){
+                instance = new MusicaRepository();
+            }
+            return instance;
+        }
+    }
+
 
     @Override
     public List<Musica> findAll() {

@@ -10,7 +10,7 @@ public class MusicaService implements Service<Musica, Long>{
     private MusicaRepository repository;
 
     public MusicaService() {
-        repository = new MusicaRepository();
+        repository =  MusicaRepository.of();
     }
 
     @Override

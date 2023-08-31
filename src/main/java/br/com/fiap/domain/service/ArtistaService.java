@@ -10,7 +10,7 @@ public class ArtistaService implements Service<Artista, Long>{
     private ArtistaRepository repository;
 
     public ArtistaService() {
-        repository = new ArtistaRepository();
+        repository =  ArtistaRepository.of();
     }
 
     @Override

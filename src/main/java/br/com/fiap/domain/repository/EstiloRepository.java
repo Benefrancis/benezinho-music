@@ -9,11 +9,34 @@ import java.util.Set;
 
 public class EstiloRepository implements Repository<Estilo, Long> {
 
+
     private Set<Estilo> estilos;
 
-    public EstiloRepository() {
+    private static volatile EstiloRepository instance;
+
+
+    private EstiloRepository() {
         estilos = new LinkedHashSet<>();
     }
+
+    /**
+     * Padrão Singleton
+     * @return
+     */
+    public static EstiloRepository of(){
+        EstiloRepository result = instance;
+        if(Objects.nonNull( result) ){
+            return result;
+        }
+
+        synchronized (EstiloRepository.class){
+            if(Objects.isNull( null )){
+                instance = new EstiloRepository();
+            }
+            return instance;
+        }
+    }
+
 
     @Override
     public List<Estilo> findAll() {
