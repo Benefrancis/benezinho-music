@@ -46,6 +46,7 @@ public class EstiloView implements View<Estilo, Long> {
     public Estilo persist(Estilo estilo) {
         var valido = false;
         String nome = null;
+
         do {
             nome = JOptionPane
                     .showInputDialog( "Nome do estilo Musical",
@@ -55,7 +56,7 @@ public class EstiloView implements View<Estilo, Long> {
 
         Estilo e = new Estilo();
         e.setNome( nome );
-
+        e.setId( estilo.getId() );
         return service.persist( e );
     }
 }
