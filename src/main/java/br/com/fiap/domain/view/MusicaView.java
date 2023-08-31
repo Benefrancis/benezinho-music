@@ -10,6 +10,8 @@ import br.com.fiap.domain.service.MusicaService;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.Vector;
 
 public class MusicaView implements View<Musica, Long> {
 
@@ -63,6 +65,11 @@ public class MusicaView implements View<Musica, Long> {
 
         var estilos = estiloService.findAll();
 
+        if(Objects.isNull( estilos ) || estilos.size() == 0) {
+            JOptionPane.showMessageDialog(null, "Não temos estilos cadastrados. Primeira mente cadastre um estilo" );
+            return null;
+        }
+
         Estilo estilo = (Estilo) JOptionPane.showInputDialog(
                 null,
                 "Selecione o Estilo Musical",
@@ -75,8 +82,12 @@ public class MusicaView implements View<Musica, Long> {
 
         var artistas = artistaService.findAll();
 
+        if(Objects.isNull( artistas ) || artistas.size() == 0) {
+            JOptionPane.showMessageDialog(null, "Não temos artistas cadastrados. Primeira mente cadastre um artista" );
+            return null;
+        }
 
-        List<Artista> listaDeArtistas = new ArrayList<>();
+        List<Artista> listaDeArtistas = new Vector<>();
 
         int continua = 0;
 
@@ -98,7 +109,7 @@ public class MusicaView implements View<Musica, Long> {
 
             continua = Integer.parseInt( JOptionPane.showInputDialog( msg, "0" ) );
 
-        } while (continua != 0);
+        } while (continua == 0);
 
         Musica m = new Musica();
         m.setNome( nome ).setEstilo( estilo );

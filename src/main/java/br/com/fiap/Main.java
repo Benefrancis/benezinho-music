@@ -17,6 +17,5 @@ public class Main {
         MenuView menu = new MenuView();
         menu.show();
 
-
     }
 }
