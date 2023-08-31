@@ -56,7 +56,7 @@ public class EstiloView implements View<Estilo, Long> {
 
         Estilo e = new Estilo();
         e.setNome( nome );
-        e.setId( estilo.getId() );
+        if (Objects.nonNull( estilo ) && Objects.nonNull( estilo.getId() ))  e.setId( estilo.getId() );
         return service.persist( e );
     }
 }

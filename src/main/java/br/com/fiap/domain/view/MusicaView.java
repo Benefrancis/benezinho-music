@@ -15,7 +15,6 @@ public class MusicaView implements View<Musica, Long> {
 
     private MusicaService service;
     private EstiloService estiloService;
-
     private ArtistaService artistaService;
 
     public MusicaView() {
@@ -63,6 +62,7 @@ public class MusicaView implements View<Musica, Long> {
 
 
         var estilos = estiloService.findAll();
+
         Estilo estilo = (Estilo) JOptionPane.showInputDialog(
                 null,
                 "Selecione o Estilo Musical",
