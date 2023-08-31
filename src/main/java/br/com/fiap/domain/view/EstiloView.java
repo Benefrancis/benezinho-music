@@ -28,7 +28,7 @@ public class EstiloView implements View<Estilo, Long> {
 
         do {
             identificador = Long.valueOf( JOptionPane.showInputDialog( "Id do Estilo" ) );
-        } while (identificador > 0);
+        } while (identificador <= 0L);
 
         return service.findById( identificador );
     }
