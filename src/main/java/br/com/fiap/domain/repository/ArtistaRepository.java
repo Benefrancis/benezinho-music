@@ -28,7 +28,7 @@ public class ArtistaRepository implements Repository<Artista, Long> {
         }
 
         synchronized (ArtistaRepository.class){
-            if(Objects.isNull( null )){
+            if(Objects.isNull( instance )){
                 instance = new ArtistaRepository();
             }
             return instance;

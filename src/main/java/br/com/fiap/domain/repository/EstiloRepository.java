@@ -30,7 +30,7 @@ public class EstiloRepository implements Repository<Estilo, Long> {
         }
 
         synchronized (EstiloRepository.class){
-            if(Objects.isNull( null )){
+            if(Objects.isNull( instance )){
                 instance = new EstiloRepository();
             }
             return instance;
